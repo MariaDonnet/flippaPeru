@@ -1,0 +1,479 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth; }
+
+body {
+  background-color: #fff; }
+
+/********** NAV  **********/
+header {
+  background-color: #fff;
+  font-family: "Roboto", sans serif;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  z-index: 3;
+  width: 100%; }
+
+.navbar-toggler {
+  background-color: #CDC0D1 !important; }
+
+.navbar li a {
+  color: #222222;
+  list-style-type: none;
+  text-decoration: none;
+  padding: 20px;
+  cursor: pointer; }
+  .navbar li a:hover {
+    color: #705977; }
+
+.navbar ul li {
+  display: inline-block; }
+
+.navbar__logo {
+  width: 200px; }
+
+.navbar-nav {
+  align-items: flex-start; }
+
+/********** DROPDOWN MENU **********/
+.dropdown {
+  display: inline-block; }
+  .dropdown:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+    background-color: #f1f1f1;
+    border-top: 5px solid #ddb2df; }
+
+.dropdown-menu a {
+  color: black;
+  padding: 15px;
+  text-decoration: none;
+  display: block; }
+  .dropdown-menu a:hover {
+    background-color: #9956ad;
+    color: white !important; }
+
+/********** COMIENZO DE GRILLA **********/
+.grid-container {
+  display: grid;
+  grid-auto-rows: minmax(300px, auto);
+  grid-template-columns: 1fr repeat(2, 300px);
+  grid-gap: 5px;
+  padding: 10px;
+  margin-bottom: 50px;
+  width: 100%;
+  height: auto; }
+
+.items {
+  background-size: cover;
+  background-position: center;
+  border: 1px solid #f1f1f1;
+  background-color: #f3f3f3; }
+
+.grid-item1 {
+  grid-column: 1/2;
+  grid-row: 1/3;
+  background-image: url(../multimedia/1.png); }
+
+.grid-item2 {
+  grid-column: 2/4;
+  grid-row: 2/3;
+  background-image: url(../multimedia/2.png); }
+
+.grid-item3 {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  background-image: url(../multimedia/6.png); }
+
+.grid-item4 {
+  grid-column: 3/4;
+  grid-row: 1/2;
+  background-image: url(../multimedia/4.png); }
+
+/********** TINTAS ECOLOGICAS **********/
+.tintasEcologicas-contenedor {
+  width: 100%;
+  font-family: "Roboto", sans serif;
+  color: #222222;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 50px; }
+
+.tintasEcologicas-icono {
+  display: flex;
+  justify-content: center;
+  margin: auto 0px;
+  padding: 20px; }
+
+.fas {
+  font-size: 60px;
+  color: #705977; }
+
+.tintasEcologicas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Roboto", sans serif; }
+
+.tintasEcologicas-titulo {
+  font-size: 30px; }
+
+.tintasEcologicas-descripcion {
+  width: 40%;
+  text-align: center; }
+
+/********** PREGUNTAS FRECUENTES **********/
+.accordion {
+  width: 70%;
+  margin: 0 auto;
+  text-align: justify; }
+
+.accordion-item {
+  font-weight: 150;
+  --bs-accordion-btn-bg: #f2deff;
+  --bs-accordion-active-bg: #f2f2f2;
+  --bs-accordion-bg: #f2deff;
+  --bs-accordion-active-color: #865aa6;
+  --bs-accordion-btn-color: #000000;
+  --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba(165, 135, 187, 0.129);
+  --bs-accordion-border-color: #c493e5;
+  --bs-accordion-btn-padding-x: 1.25rem;
+  --bs-accordion-btn-padding-y: 1rem; }
+
+/********** COMENTARIOS DE COMPRADORES **********/
+.comentarios-contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+  color: #000;
+  font-size: 18px;
+  font-family: "Roboto", sans serif; }
+
+.titulo {
+  font-weight: bold;
+  font-style: italic;
+  font-size: 1.4rem;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 15px; }
+
+.card-text {
+  font-size: 1rem;
+  font-weight: 300;
+  padding: 0px 15px 15px 15px; }
+
+.comentario {
+  padding: 30px;
+  margin: 8px;
+  text-align: center;
+  align-items: center;
+  text-justify: newspaper;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  box-shadow: 0px 2px 6px #494949; }
+  .comentario img {
+    width: 100px; }
+
+.card {
+  border-radius: 8px;
+  box-shadow: 0px 2px 6px #c89aca;
+  transition: all 0.5s; }
+
+/********** BOTÓN PARA PERSONALIZAR PEDIDO **********/
+.boton {
+  display: flex;
+  justify-content: center;
+  padding: 40px; }
+  .boton .btn {
+    font-family: "Roboto", sans serif;
+    color: #fff;
+    background-color: #705977;
+    border: none;
+    font-size: 20px;
+    letter-spacing: 3px;
+    padding: 15px;
+    transition: background-color 0.2s, color 0.2s; }
+    .boton .btn:hover {
+      background-color: #ddb2df;
+      color: black; }
+  .boton .personalizar-pedido-link {
+    color: #fff;
+    margin-bottom: 30px; }
+    .boton .personalizar-pedido-link:hover {
+      color: #000;
+      text-decoration: none; }
+
+/********** FLECHA **********/
+.flechaSpan {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  border: 2px solid #705977;
+  border-radius: 50%;
+  transition: .2s;
+  overflow: hidden;
+  margin: 5px;
+  box-shadow: 0 0 20px #c89aca; }
+  .flechaSpan:hover {
+    transform: scale(1.2, 1.2); }
+
+.flechaSpan svg {
+  height: 20px;
+  width: 20px;
+  color: #705977; }
+
+/**************** FOOTER *****************/
+.footer-contenedor {
+  width: 90%;
+  margin: 0px auto;
+  margin-top: 20px;
+  border-top: 2px solid #222222;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Roboto", sans serif; }
+
+.footer-titulo {
+  margin-top: 8px;
+  font-size: 22px;
+  color: #222222; }
+
+.footer-iconos a {
+  font-size: 50px;
+  color: #705977;
+  height: 45px;
+  width: 45px;
+  display: inline-block;
+  text-align: center;
+  line-height: 43px;
+  margin: 30px 5px 30px 0;
+  transition: all 0.3s ease; }
+  .footer-iconos a:hover {
+    color: #705977;
+    transform: scale(1.2); }
+
+/******************* TITULOS DE LOS MAS BUSCADOS *******************/
+.titulo-paginas {
+  color: #9956ad;
+  font-size: 3rem;
+  text-align: end;
+  padding-right: 8px; }
+  .titulo-paginas a {
+    color: #9956ad;
+    transition: color 0.2s;
+    margin-right: 0.5rem; }
+    .titulo-paginas a:hover {
+      color: #ddb2df; }
+
+.footer-contenedor-pages {
+  width: 90%;
+  margin: 0px auto;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Roboto", sans serif; }
+
+/************************** IMÁGENES DE CADA PÁGINA ******************/
+.grid-containerBrave {
+  display: grid;
+  padding: 10px;
+  margin-bottom: 50px;
+  grid-template-columns: 2fr 2fr 1fr;
+  grid-auto-rows: minmax(300px, auto);
+  gap: 5px;
+  width: 100%;
+  height: auto; }
+
+.brave {
+  background-size: cover;
+  background-position: center;
+  border: 1px solid #f1f1f1;
+  background-color: #f3f3f3; }
+
+.brave-item1 {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  background-image: url(../multimedia/3.png); }
+
+.brave-item2 {
+  grid-column: 1/2;
+  grid-row: 2/4;
+  background-image: url(../multimedia/1.png); }
+
+.brave-item3 {
+  grid-column: 2/3;
+  grid-row: 3/4;
+  background-image: url(../multimedia/9.png); }
+
+.brave-item4 {
+  grid-column: 2/3;
+  grid-row: 1/3;
+  background-image: url(../multimedia/4.png); }
+
+.brave-item5 {
+  grid-column: 3/4;
+  grid-row: 1/4;
+  background-image: url(../multimedia/2-2.jpg); }
+
+.peruanita-item1 {
+  grid-column: 1/2;
+  grid-row: 1/3;
+  background-image: url("../multimedia/6.png"); }
+
+.peruanita-item2 {
+  grid-column: 2/4;
+  grid-row: 2/3;
+  background-image: url("../multimedia/5-2.png"); }
+
+.peruanita-item3 {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  background-image: url("../multimedia/8.png"); }
+
+.peruanita-item4 {
+  grid-column: 3/4;
+  grid-row: 1/2;
+  background-image: url("../multimedia/7.png"); }
+
+/******************* TABLET *******************/
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  /* GRID INDEX */
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(230px, auto);
+    gap: 8px; }
+  .grid-item1 {
+    grid-row: 1/4;
+    grid-column: 1/2; }
+  .grid-item2 {
+    grid-row: 3/4;
+    grid-column: 2/3; }
+  .grid-item3 {
+    grid-row: 2/3;
+    grid-column: 2/3; }
+  .grid-item4 {
+    grid-row: 1/2;
+    grid-column: 2/3; }
+  /* TINTAS ECOLOGICAS */
+  .tintasEcologicas-titulo {
+    font-size: 25px;
+    text-align: center; }
+  .tintasEcologicas-descripcion {
+    width: 60%;
+    text-align: center; }
+  .fas {
+    font-size: 50px; }
+  /* GRID BRAVE */
+  .grid-containerBrave {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(300px, auto);
+    gap: 8px; }
+  .brave-item1 {
+    grid-column: 1/3;
+    grid-row: 4/5; }
+  .brave-item2 {
+    grid-column: 2/3;
+    grid-row: 1/2; }
+  .brave-item3 {
+    grid-column: 1/3; }
+  .brave-item4 {
+    grid-row: 2/3; }
+  .brave-item5 {
+    grid-column: 1/2;
+    grid-row: 1/3; }
+  /* GRID PERUANITA */
+  .peruanita-item1 {
+    grid-column: 1/2;
+    grid-row: 1/3; }
+  .peruanita-item2 {
+    grid-column: 1/3;
+    grid-row: 3/4; }
+  .peruanita-item3 {
+    grid-column: 2/3;
+    grid-row: 1/2; }
+  .peruanita-item4 {
+    grid-column: 2/3;
+    grid-row: 2/3; } }
+
+/******************* MOBILE *******************/
+@media only screen and (max-width: 768px) {
+  /* NAV */
+  .navbar__logo {
+    width: 150px; }
+  /* GRID INDEX */
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(450px, auto);
+    margin-bottom: 30px;
+    gap: 10px; }
+  .grid-item1 {
+    grid-row: 1/2;
+    grid-column: 1/2; }
+  .grid-item2 {
+    grid-row: 2;
+    grid-column: 1/2; }
+  .grid-item3 {
+    grid-row: 3;
+    grid-column: 1/2; }
+  .grid-item4 {
+    grid-row: 4;
+    grid-column: 1/2; }
+  /*************** TINTAS ECOLOGICAS ***********/
+  .tintasEcologicas-titulo {
+    font-size: 20px;
+    text-align: center; }
+  .tintasEcologicas-descripcion {
+    width: 80%;
+    text-align: center; }
+  .fas {
+    font-size: 40px; }
+  /* GRID BRAVE */
+  .grid-containerBrave {
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(450px, auto);
+    margin-bottom: 30px;
+    gap: 10px; }
+  .brave-item1 {
+    grid-column: 1/2;
+    grid-row: 5; }
+  .brave-item2 {
+    grid-column: 1/2;
+    grid-row: 1; }
+  .brave-item3 {
+    grid-column: 1/2;
+    grid-row: 4; }
+  .brave-item4 {
+    grid-column: 1/2;
+    grid-row: 2; }
+  .brave-item5 {
+    grid-column: 1/2;
+    grid-row: 3;
+    background-image: url(../multimedia/2.png); }
+  /* GRID PERUANITA */
+  .peruanita-item1 {
+    grid-row: 1; }
+  .peruanita-item2 {
+    grid-column: 1/2;
+    grid-row: 2; }
+  .peruanita-item3 {
+    grid-column: 1/2;
+    grid-row: 3; }
+  .peruanita-item4 {
+    grid-column: 1/2;
+    grid-row: 4; } }

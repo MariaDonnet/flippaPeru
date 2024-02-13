@@ -1,0 +1,271 @@
+/********** NAV  **********/
+header {
+    background-color: $color-bg;
+    font-family: $font;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    z-index: 3;
+    width: 100%;
+}
+
+.navbar-toggler {
+    background-color: $toggle-button-color  !important;
+}
+
+.navbar {
+    li {
+        a {
+            color: $color1;
+            list-style-type: none;
+            text-decoration: none;
+            padding: 20px;
+            cursor: pointer;
+            // transition: transform 0.5s ease;
+        &:hover {
+            color: $color2;
+          // transform: translateX(0.5em);
+        }
+    }
+}
+    ul {
+            li {
+            display: inline-block;
+        }
+    }
+}
+
+.navbar__logo {
+    width: 200px;
+}
+
+.navbar-nav{
+    align-items: flex-start
+}
+/********** DROPDOWN MENU **********/
+
+
+.dropdown {
+    display: inline-block;
+    &:hover {
+        .dropdown-menu {
+            display: block;
+            opacity: 1;
+            background-color: #f1f1f1;
+            border-top: 5px solid $dropdown-border-color;
+        }
+    }
+}
+
+.dropdown-menu {
+    a {
+        color: black;
+        padding: 15px;
+        text-decoration: none;
+        display: block;
+        &:hover {
+            background-color: $color-titulo;
+            color: white !important;
+        }
+    }
+}
+
+/********** COMIENZO DE GRILLA **********/
+.grid-container {
+    display: grid;
+    grid-auto-rows: minmax(300px, auto);
+    grid-template-columns: 1fr repeat(2, 300px);
+    grid-gap: 5px;
+    padding: 10px;
+    margin-bottom: 50px;
+    width: 100%;
+    height: auto;
+}
+.items{
+    background-size: cover;
+    background-position: center;
+    border: 1px solid rgb(241, 241, 241);
+    background-color: #f3f3f3;
+}
+
+.grid-item1 {
+    grid-column: 1/2;
+    grid-row: 1/3;
+    background-image: url(../multimedia/1.png);
+}
+
+.grid-item2 {
+    grid-column: 2/4;
+    grid-row: 2/3;
+    background-image: url(../multimedia/2.png);
+}
+
+.grid-item3 {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    background-image: url(../multimedia/6.png);
+}
+
+.grid-item4 {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    background-image: url(../multimedia/4.png);
+}
+
+/********** TINTAS ECOLOGICAS **********/
+.tintasEcologicas-contenedor {
+    width: 100%;
+    font-family: $font;
+    color: $color1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.tintasEcologicas-icono {
+    display: flex;
+    justify-content: center;
+    margin: auto 0px;
+    padding: 20px;
+}
+.fas {
+    font-size: 60px;
+    color: $color2;
+}
+.tintasEcologicas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: $font;
+}
+.tintasEcologicas-titulo {
+    font-size: 30px;
+}
+.tintasEcologicas-descripcion {
+    width: 40%;
+    text-align: center;
+}
+
+/********** PREGUNTAS FRECUENTES **********/
+.accordion {
+    width: 70%;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+.accordion-item {
+    font-weight: 150;
+    --bs-accordion-btn-bg: #f2deff;
+    --bs-accordion-active-bg: #f2f2f2;
+    --bs-accordion-bg: #f2deff;
+    --bs-accordion-active-color: #865aa6;
+    --bs-accordion-btn-color: #000000;
+    --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba(165, 135, 187, 0.129);
+    --bs-accordion-border-color: #c493e5;
+    --bs-accordion-btn-padding-x: 1.25rem;
+    --bs-accordion-btn-padding-y: 1rem;
+}
+
+/********** COMENTARIOS DE COMPRADORES **********/
+.comentarios-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+    color: $color4;
+    font-size: 18px;
+    font-family: $font;
+}
+
+.titulo {
+    font-weight: bold;
+    font-style: italic;
+    font-size: 1.4rem;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.card-text {
+    font-size: 1rem;
+    font-weight: 300;
+    padding: 0px 15px 15px 15px;
+}
+
+.comentario {
+    padding: 30px;
+    margin: 8px;
+    text-align: center;
+    align-items: center;
+    text-justify: newspaper;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0px 2px 6px #494949;
+    img {
+        width: 100px;
+    }
+}
+.card {
+    border-radius: 8px;
+    box-shadow: 0px 2px 6px #c89aca;
+    transition: all 0.5s;
+}
+
+
+/********** BOTÓN PARA PERSONALIZAR PEDIDO **********/
+.boton {
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+
+    .btn {
+        font-family: $font;
+        color: $color-bg;
+        background-color: $color2;
+        border: none;
+        font-size: 20px;
+        letter-spacing: 3px;
+        padding: 15px;
+        transition: background-color 0.2s, color 0.2s;
+        &:hover {
+            background-color: #ddb2df;
+            color: black;
+        }
+    }
+.personalizar-pedido-link {
+        color: $color-bg;
+        margin-bottom: 30px;
+        &:hover {
+            color: $color4;
+            text-decoration: none;
+        }
+    }
+}
+
+/********** FLECHA **********/
+.flechaSpan {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border: 2px solid #705977;
+    border-radius: 50%;
+    transition: .2s;
+    overflow: hidden;
+    margin: 5px;
+    box-shadow: 0 0 20px rgb(200, 154, 202);
+    &:hover {
+        transform: scale(1.2, 1.2);
+    }
+}
+.flechaSpan svg{
+    height: 20px;
+    width: 20px;
+    color: #705977;
+}
